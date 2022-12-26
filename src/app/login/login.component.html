@@ -1,0 +1,133 @@
+<div id="photo">
+  <img
+    src="https://assets.materialup.com/uploads/791c5656-94f1-4510-a427-8282ede5d13d/preview.gif"
+  />
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div
+      class="col-md-6 col-sm-12 mt-0 mt-lg-3 justify-content-center align-items-center"
+    >
+      <h2 class="text-left m-3 fiberlogo">Fiber</h2>
+      <h1 class="mt-2 text-center"><b> Create your Fiber account </b></h1>
+      <div
+        class="d-flex justify-content-center align-items-center mt-lg-5 mt-4"
+      >
+        <form
+          class="text-left"
+          #login="ngForm"
+          (ngSubmit)="add(login)"
+          autocomplete="off"
+        >
+          <div class="form-group mt-1">
+            <label for="exampleInputEmail1"> <b>Your Name </b> </label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="John Doe"
+              name="name"
+              #name="ngModel"
+              ngModel
+              required
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="name.touched && !name.valid && name.hasError('required')"
+            >
+              Name is Required
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="exampleInputEmail1"> <b>E-mail</b></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="john#@example.com"
+              name="email"
+              #email="ngModel"
+              ngModel
+              [email]="true"
+              required
+              minlength="5"
+            />
+            <div
+              class="alert alert-danger"
+              *ngIf="
+                email.touched && !email.valid && email.hasError('required')
+              "
+            >
+              Email is Required
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="exampleInputPassword1"><b>Password</b></label>
+            <input
+              placeholder="A least 8 characters"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              name="password"
+              #password="ngModel"
+              ngModel
+              required
+            />
+          </div>
+          <div
+            class="alert alert-danger"
+            *ngIf="
+              password.touched &&
+              !password.valid &&
+              password.hasError('required')
+            "
+          >
+            Password is Required
+          </div>
+          <div class="form-group form-check mt-4">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <p>
+              By creating an account on Fiber, you agree to
+              <b class="text-danger tersm">Terms & condition</b>
+            </p>
+          </div>
+          <div class="text-center btnandspan mt-1">
+            <button
+              routerLink="homepage"
+              type="submit"
+              class="btn btn-primary text-light my-2"
+              [disabled]="login.invalid"
+            >
+              Create Fiber Account
+            </button>
+            <p class="mt-0">
+              Already have an account?
+              <span class="signin" routerLink="signin">Sign in</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="col-md-6 col-12 d-flex align-items-center justify-content-center divimage"
+    >
+      <div class="col-md-9 col-12 text-center">
+        <img src="assets/img/Sign Up Image.png" class="img-fluid" alt="" />
+        <div class="mt-4">
+          <h1 class="text-light">Unparalleled Templates</h1>
+          <p class="mt-2 text-monospace textimg">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut et
+            debitis perferendis, dignissimos quae cupiditate. Reiciendis
+            reprehenderit ipsa quas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

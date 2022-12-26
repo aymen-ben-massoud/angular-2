@@ -1,0 +1,263 @@
+
+.navbar-brand{
+    color: #541ada!important; 
+}
+.navcentertext a {
+   
+    font-weight: 500;
+    color: black!important;
+}
+.changenav{
+    position: fixed;
+    
+    top: 0;
+    z-index: 3;
+    width: 100%;
+   
+}
+#move{
+    transform: translateX(-110%);
+transition: all 1.4s  ease-in-out;
+}
+#move2{
+    transform: translateX(110%);
+    transition: all 1.4s  ease-in-out;
+}
+.navcentertext a:hover{
+    opacity: 0.9;
+    border-bottom: 2px solid #541ada;
+    
+}
+nav{
+    height:  60px!important;
+    
+} 
+nav form button:first-child{
+    border: unset;
+    font-weight: 500;
+    color: black!important;
+   
+}
+
+nav form button:first-child:hover{
+color: black!important;
+    font-weight: 500;
+    background-color: whitesmoke!important;
+ 
+    opacity: 0.8;
+}
+
+
+nav form button:nth-child(2){  
+    background-color: #541ada;
+    color: whitesmoke;
+    font-weight: 500;
+}
+nav form button:nth-child(2):hover{  
+    background-color: whitesmoke;
+    color:#541ada;
+    font-weight: 500;
+    border: 1px solid #541ada !important;
+    transition: all 0.5s;
+} 
+
+.firstimg{
+    width: 550px;
+    height: 550px;
+    }
+    .first-left , .first-right{
+        height: calc(100vh - 60px  );
+
+    }
+.btnstart{
+
+    background-color: #541ada;
+    color: whitesmoke;
+    font-weight: 500;
+}
+.btnstart:hover{
+
+    background-color: whitesmoke;
+    color:#541ada;
+    font-weight: 500;
+    border: 1px solid #541ada !important;
+    transition: all 0.5s;
+}
+.thea{
+    color:#541ada;
+text-decoration:underline;
+}
+.thea:hover{
+    color:#541ada;  
+}
+.whyfiber{
+    color:#541ada; 
+    font-weight: 600;
+}
+.textwithimage{
+    background-color: #541ada;
+    height: fit-content;
+}
+.bimage{
+    color: #541ada;
+    font-weight: 700;
+
+}
+.bimage:hover{
+    color: #541ada; 
+}
+
+.card-title{
+    font-size: 12px;
+   line-height: 0%;
+
+}
+
+.card-title p:nth-child(1){
+    color: #541ada!important; 
+    font-weight: 600;
+}
+.btnofcard{
+    color: #541ada;
+    font-weight: 600;
+    border: 0.5px solid rgb(209, 208, 208);
+}
+.btnofcard:hover{
+    color: #541ada;
+    font-weight: 600;
+    border: 0.5px solid rgb(209, 208, 208);
+}
+footer{
+    font-weight: 500;
+    background-color: whitesmoke!important;
+}
+footer div h1{
+    font-size: 20px;
+}
+footer div div p{
+    font-size: 15px;
+}
+.opacitybefor{
+    width: 0px;
+    opacity: 0;
+   
+}
+.opacityafter{
+    width: 100%;
+    opacity: 1;
+
+}
+
+.skew:hover
+{transform: skew(3deg)!important;
+    transition: all 0.3s ease!important;
+
+}
+.changingbefor{
+    width: 0px;
+    opacity: 0;  
+  
+}
+.changingafter{
+    width: 100%;
+    opacity: 1;
+      
+}
+@media only screen and (max-width: 700px) {
+   
+    .firstimg{
+        width: 340px;
+        height: 340px;
+        }
+.first-right{
+    height: fit-content;
+}
+.navbar-collapse{
+  backdrop-filter: blur(4px);
+text-align: center;
+
+    z-index: 2;
+    
+ 
+    height: 100vh;
+   
+
+
+}
+.form-inline{
+    text-align: center;
+}
+}
+.scrol{
+    width: 50px;
+    height: 50px;
+    background-color: #541ada;
+    color: aliceblue;
+    border-radius: 50px;
+    bottom: 15px;
+    right:  15px ;
+    position: fixed; 
+ text-align: center;
+ padding-top: 10px ;
+ cursor: pointer;
+ z-index: 4;
+ display: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.photo2{
+    
+    animation: visible 2s forwards;
+   
+}
+@keyframes visible{
+    100%{
+        opacity: 0;
+visibility: hidden;
+    }
+0%{
+    opacity: 100%;
+}
+}
+#photo{
+  position: fixed;
+ z-index: 4;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+  
+    
+
+ 
+}
+#photo img{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+

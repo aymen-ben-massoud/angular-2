@@ -1,0 +1,65 @@
+<div class="forms">
+  <form class="p-4" #login="ngForm" (ngSubmit)="add(login)" autocomplete="off">
+    <div class="form-group mt-3">
+      <label for="exampleInputEmail1"> <b>E-mail</b></label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        placeholder="john#@example.com"
+        name="email"
+        #email="ngModel"
+        ngModel
+        [email]="true"
+        required
+        minlength="5"
+      />
+      <div
+        class="alert alert-danger"
+        *ngIf="email.touched && !email.valid && email.hasError('required')"
+      >
+        Email is Required
+      </div>
+    </div>
+    <div class="form-group mt-3">
+      <label for="exampleInputPassword1"><b>Password</b></label>
+      <input
+        placeholder="A least 8 characters"
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="password"
+        #password="ngModel"
+        ngModel
+        required
+      />
+    </div>
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        password.touched && !password.valid && password.hasError('required')
+      "
+    >
+      Password is Required
+    </div>
+    <div class="buttons">
+      <button
+        routerLink="/homepage"
+        type="submit"
+        class="btn btn-primary text-light my-2"
+        [disabled]="login.invalid"
+      >
+        Sign In
+      </button>
+      <br />
+      <button
+        routerLink=""
+        type="submit"
+        class="btn btn-primary text-light my-2"
+      >
+        Go Back
+      </button>
+    </div>
+  </form>
+</div>
